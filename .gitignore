@@ -1,5 +1,7 @@
 __pycache__/
 *.pyc
 .venv/
-index.json
-runs/
+
+# The index and the run artifact are committed on purpose: ADR-0005 says a number is
+# only published if a committed artifact contains it, and the artifact names this index
+# by hash. Committing both lets a reader verify the README without rebuilding.

@@ -1,0 +1,38 @@
+{"id": "bm25-sum", "question": "how is the bm25 score of a document computed", "relevant": ["bm25-scoring.md#0-760"]}
+{"id": "bm25-forces", "question": "what two forces does bm25 balance", "relevant": ["bm25-scoring.md#0-760"]}
+{"id": "bm25-idf", "question": "what is the smoothed inverse document frequency formula", "relevant": ["bm25-scoring.md#0-760", "bm25-scoring.md#610-1241"]}
+{"id": "bm25-bag", "question": "does bm25 consider word order", "relevant": ["bm25-scoring.md#610-1241"]}
+{"id": "k1-curve", "question": "how quickly does the term frequency curve flatten", "relevant": ["term-saturation-and-length-normalisation.md#540-1144"]}
+{"id": "k1-zero", "question": "what happens when k1 is zero", "relevant": ["term-saturation-and-length-normalisation.md#540-1144"]}
+{"id": "b-normalisation", "question": "why are long documents penalised", "relevant": ["term-saturation-and-length-normalisation.md#540-1144", "term-saturation-and-length-normalisation.md#994-1671"]}
+{"id": "b-important", "question": "which parameter matters more in practice", "relevant": ["term-saturation-and-length-normalisation.md#994-1671"]}
+{"id": "chunk-why", "question": "why return passages instead of whole documents", "relevant": ["chunking.md#0-790"]}
+{"id": "chunk-paragraphs", "question": "why cut on paragraph boundaries rather than fixed size", "relevant": ["chunking.md#640-1365"]}
+{"id": "chunk-overlap", "question": "what does overlap between chunks do", "relevant": ["chunking.md#640-1365", "chunking.md#1215-1894"]}
+{"id": "chunk-overlap-cost", "question": "when is overlap worth the cost", "relevant": ["chunking.md#1215-1894"]}
+{"id": "chunk-hyper", "question": "how should chunk size be chosen", "relevant": ["chunking.md#1215-1894"]}
+{"id": "inv-basic", "question": "what is an inverted index", "relevant": ["inverted-indexes.md#0-620"]}
+{"id": "inv-dict", "question": "which part of the index decides how it is stored", "relevant": ["inverted-indexes.md#470-1024"]}
+{"id": "inv-segments", "question": "why do production engines use segments", "relevant": ["inverted-indexes.md#874-1526"]}
+{"id": "rp-defs", "question": "what is the difference between recall and precision", "relevant": ["recall-and-precision.md#0-713"]}
+{"id": "rp-binds", "question": "which metric constrains a retrieval step feeding a model", "relevant": ["recall-and-precision.md#0-713"]}
+{"id": "rp-recallk", "question": "what does recall at k measure", "relevant": ["recall-and-precision.md#563-1266"]}
+{"id": "rp-why-not-precision", "question": "why is precision alone not enough", "relevant": ["recall-and-precision.md#1116-1660"]}
+{"id": "mrr-def", "question": "how is reciprocal rank computed", "relevant": ["mean-reciprocal-rank.md#0-685"]}
+{"id": "mrr-limit", "question": "what does mrr ignore", "relevant": ["mean-reciprocal-rank.md#535-1204"]}
+{"id": "mrr-interpret", "question": "what does a high recall with low mrr mean", "relevant": ["mean-reciprocal-rank.md#1054-1492"]}
+{"id": "ds-topic", "question": "how should the relevant passage be chosen for a dataset", "relevant": ["building-an-evaluation-dataset.md#0-786"]}
+{"id": "ds-circular", "question": "what is the most common way an evaluation number becomes meaningless", "relevant": ["building-an-evaluation-dataset.md#0-786"]}
+{"id": "ds-broken", "question": "what should happen when a dataset cites a passage the index lacks", "relevant": ["building-an-evaluation-dataset.md#636-1190"]}
+{"id": "ds-howmany", "question": "how many cases are needed before publishing a number", "relevant": ["building-an-evaluation-dataset.md#1040-1791"]}
+{"id": "trace-why", "question": "why must a retrieval run record how it got its answer", "relevant": ["tracing-a-retrieval-run.md#0-318"]}
+{"id": "trace-terms", "question": "what should a trace record about the query terms", "relevant": ["tracing-a-retrieval-run.md#168-885"]}
+{"id": "trace-nearmiss", "question": "why report candidates beyond the top k", "relevant": ["tracing-a-retrieval-run.md#735-1271"]}
+{"id": "lex-def", "question": "what does lexical retrieval match", "relevant": ["lexical-versus-semantic.md#0-687"]}
+{"id": "lex-identifiers", "question": "where does lexical retrieval beat semantic retrieval", "relevant": ["lexical-versus-semantic.md#0-687"]}
+{"id": "lex-hybrid", "question": "when is hybrid retrieval justified", "relevant": ["lexical-versus-semantic.md#1010-1654"]}
+{"id": "tok-def", "question": "what does tokenisation decide", "relevant": ["tokenisation.md#0-678"]}
+{"id": "tok-stem", "question": "what does stemming do", "relevant": ["tokenisation.md#528-1134"]}
+{"id": "tok-stop", "question": "why remove stopwords", "relevant": ["tokenisation.md#984-1665"]}
+{"id": "json-inspect", "question": "why keep the index human readable", "relevant": ["why-the-index-is-readable.md#0-577"]}
+{"id": "json-diff", "question": "how does a readable index help explain a change in recall", "relevant": ["why-the-index-is-readable.md#427-1184"]}

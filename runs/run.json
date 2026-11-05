@@ -1,0 +1,955 @@
+{
+  "tool": "recall-lab",
+  "version": "0.1.0",
+  "generated_at": "2026-11-05T09:18:57+00:00",
+  "code_revision": "c1eea8d78a779ed5260313c44fea82afaf91d847",
+  "dataset": {
+    "path": "evals/dataset.jsonl",
+    "sha256": "ee63926d9d82051e94264d91490868791db80cd48a8106291c211ed2c9c101d5"
+  },
+  "index": {
+    "path": "index.json",
+    "sha256": "0d74513a0afe913bae229b749ab7f67190d747fef1626bc34b837ed41b817d63"
+  },
+  "config": {
+    "k1": 1.2,
+    "b": 0.75,
+    "chunk_target_chars": 800,
+    "chunk_overlap_chars": 150,
+    "k_values": [
+      1,
+      5,
+      10
+    ],
+    "tokenizer": "lowercase, split on [^a-z0-9], drop length < 2"
+  },
+  "index_chunks": 33,
+  "stale_check": true,
+  "stale_cases": [],
+  "aggregates": {
+    "cases": 38,
+    "cases_scored": 38,
+    "recall@1": 0.723684,
+    "recall@5": 0.973684,
+    "recall@10": 1.0,
+    "mrr": 0.872807
+  },
+  "zero_cases": [],
+  "per_case": [
+    {
+      "id": "bm25-sum",
+      "question": "how is the bm25 score of a document computed",
+      "relevant": [
+        "bm25-scoring.md#0-760"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "bm25-scoring.md#0-760",
+        "inverted-indexes.md#0-620",
+        "bm25-scoring.md#610-1241",
+        "tracing-a-retrieval-run.md#0-318",
+        "term-saturation-and-length-normalisation.md#0-690",
+        "inverted-indexes.md#470-1024",
+        "tracing-a-retrieval-run.md#168-885",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "lexical-versus-semantic.md#537-1160",
+        "chunking.md#0-790"
+      ]
+    },
+    {
+      "id": "bm25-forces",
+      "question": "what two forces does bm25 balance",
+      "relevant": [
+        "bm25-scoring.md#0-760"
+      ],
+      "returned": 25,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "bm25-scoring.md#0-760",
+        "bm25-scoring.md#610-1241",
+        "mean-reciprocal-rank.md#0-685",
+        "mean-reciprocal-rank.md#535-1204",
+        "inverted-indexes.md#0-620",
+        "term-saturation-and-length-normalisation.md#0-690",
+        "chunking.md#640-1365",
+        "tracing-a-retrieval-run.md#0-318",
+        "tracing-a-retrieval-run.md#168-885",
+        "lexical-versus-semantic.md#537-1160"
+      ]
+    },
+    {
+      "id": "bm25-idf",
+      "question": "what is the smoothed inverse document frequency formula",
+      "relevant": [
+        "bm25-scoring.md#0-760",
+        "bm25-scoring.md#610-1241"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "bm25-scoring.md#0-760",
+        "bm25-scoring.md#610-1241",
+        "inverted-indexes.md#0-620",
+        "term-saturation-and-length-normalisation.md#540-1144",
+        "why-the-index-is-readable.md#0-577",
+        "term-saturation-and-length-normalisation.md#0-690",
+        "tracing-a-retrieval-run.md#0-318",
+        "tracing-a-retrieval-run.md#168-885",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "chunking.md#0-790"
+      ]
+    },
+    {
+      "id": "bm25-bag",
+      "question": "does bm25 consider word order",
+      "relevant": [
+        "bm25-scoring.md#610-1241"
+      ],
+      "returned": 16,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "bm25-scoring.md#610-1241",
+        "mean-reciprocal-rank.md#0-685",
+        "inverted-indexes.md#0-620",
+        "tracing-a-retrieval-run.md#0-318",
+        "mean-reciprocal-rank.md#535-1204",
+        "tokenisation.md#0-678",
+        "tracing-a-retrieval-run.md#168-885",
+        "inverted-indexes.md#470-1024",
+        "lexical-versus-semantic.md#537-1160",
+        "bm25-scoring.md#0-760"
+      ]
+    },
+    {
+      "id": "k1-curve",
+      "question": "how quickly does the term frequency curve flatten",
+      "relevant": [
+        "term-saturation-and-length-normalisation.md#540-1144"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "term-saturation-and-length-normalisation.md#540-1144",
+        "bm25-scoring.md#0-760",
+        "bm25-scoring.md#610-1241",
+        "inverted-indexes.md#0-620",
+        "term-saturation-and-length-normalisation.md#0-690",
+        "mean-reciprocal-rank.md#0-685",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "inverted-indexes.md#470-1024",
+        "mean-reciprocal-rank.md#535-1204",
+        "tracing-a-retrieval-run.md#168-885"
+      ]
+    },
+    {
+      "id": "k1-zero",
+      "question": "what happens when k1 is zero",
+      "relevant": [
+        "term-saturation-and-length-normalisation.md#540-1144"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 2,
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "recall-and-precision.md#0-713",
+        "term-saturation-and-length-normalisation.md#540-1144",
+        "tracing-a-retrieval-run.md#168-885",
+        "tracing-a-retrieval-run.md#0-318",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "mean-reciprocal-rank.md#0-685",
+        "term-saturation-and-length-normalisation.md#0-690",
+        "bm25-scoring.md#0-760",
+        "recall-and-precision.md#1116-1660",
+        "why-the-index-is-readable.md#0-577"
+      ]
+    },
+    {
+      "id": "b-normalisation",
+      "question": "why are long documents penalised",
+      "relevant": [
+        "term-saturation-and-length-normalisation.md#540-1144",
+        "term-saturation-and-length-normalisation.md#994-1671"
+      ],
+      "returned": 23,
+      "first_relevant_rank": 1,
+      "recall@1": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "term-saturation-and-length-normalisation.md#540-1144",
+        "chunking.md#0-790",
+        "bm25-scoring.md#610-1241",
+        "inverted-indexes.md#0-620",
+        "chunking.md#1215-1894",
+        "lexical-versus-semantic.md#537-1160",
+        "why-the-index-is-readable.md#0-577",
+        "why-the-index-is-readable.md#1034-1419",
+        "inverted-indexes.md#470-1024"
+      ]
+    },
+    {
+      "id": "b-important",
+      "question": "which parameter matters more in practice",
+      "relevant": [
+        "term-saturation-and-length-normalisation.md#994-1671"
+      ],
+      "returned": 26,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "recall-and-precision.md#0-713",
+        "bm25-scoring.md#610-1241",
+        "why-the-index-is-readable.md#427-1184",
+        "lexical-versus-semantic.md#0-687",
+        "term-saturation-and-length-normalisation.md#540-1144",
+        "lexical-versus-semantic.md#1010-1654",
+        "recall-and-precision.md#563-1266",
+        "term-saturation-and-length-normalisation.md#0-690",
+        "chunking.md#1215-1894"
+      ]
+    },
+    {
+      "id": "chunk-why",
+      "question": "why return passages instead of whole documents",
+      "relevant": [
+        "chunking.md#0-790"
+      ],
+      "returned": 30,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "chunking.md#0-790",
+        "chunking.md#1215-1894",
+        "inverted-indexes.md#0-620",
+        "why-the-index-is-readable.md#427-1184",
+        "tracing-a-retrieval-run.md#168-885",
+        "recall-and-precision.md#0-713",
+        "bm25-scoring.md#610-1241",
+        "recall-and-precision.md#563-1266",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "mean-reciprocal-rank.md#1054-1492"
+      ]
+    },
+    {
+      "id": "chunk-paragraphs",
+      "question": "why cut on paragraph boundaries rather than fixed size",
+      "relevant": [
+        "chunking.md#640-1365"
+      ],
+      "returned": 27,
+      "first_relevant_rank": 2,
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "chunking.md#0-790",
+        "chunking.md#640-1365",
+        "tracing-a-retrieval-run.md#1121-1543",
+        "chunking.md#1215-1894",
+        "recall-and-precision.md#563-1266",
+        "inverted-indexes.md#874-1526",
+        "recall-and-precision.md#1116-1660",
+        "building-an-evaluation-dataset.md#1040-1791",
+        "tracing-a-retrieval-run.md#735-1271",
+        "why-the-index-is-readable.md#427-1184"
+      ]
+    },
+    {
+      "id": "chunk-overlap",
+      "question": "what does overlap between chunks do",
+      "relevant": [
+        "chunking.md#640-1365",
+        "chunking.md#1215-1894"
+      ],
+      "returned": 22,
+      "first_relevant_rank": 1,
+      "recall@1": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "chunking.md#640-1365",
+        "chunking.md#0-790",
+        "mean-reciprocal-rank.md#0-685",
+        "chunking.md#1215-1894",
+        "building-an-evaluation-dataset.md#1040-1791",
+        "mean-reciprocal-rank.md#535-1204",
+        "tracing-a-retrieval-run.md#0-318",
+        "building-an-evaluation-dataset.md#636-1190",
+        "tracing-a-retrieval-run.md#1121-1543",
+        "tracing-a-retrieval-run.md#168-885"
+      ]
+    },
+    {
+      "id": "chunk-overlap-cost",
+      "question": "when is overlap worth the cost",
+      "relevant": [
+        "chunking.md#1215-1894"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "chunking.md#1215-1894",
+        "chunking.md#640-1365",
+        "why-the-index-is-readable.md#0-577",
+        "inverted-indexes.md#874-1526",
+        "lexical-versus-semantic.md#0-687",
+        "tokenisation.md#528-1134",
+        "tracing-a-retrieval-run.md#1121-1543",
+        "tracing-a-retrieval-run.md#735-1271",
+        "tokenisation.md#0-678",
+        "recall-and-precision.md#0-713"
+      ]
+    },
+    {
+      "id": "chunk-hyper",
+      "question": "how should chunk size be chosen",
+      "relevant": [
+        "chunking.md#1215-1894"
+      ],
+      "returned": 22,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "chunking.md#1215-1894",
+        "chunking.md#0-790",
+        "why-the-index-is-readable.md#427-1184",
+        "building-an-evaluation-dataset.md#1040-1791",
+        "chunking.md#640-1365",
+        "tracing-a-retrieval-run.md#0-318",
+        "tracing-a-retrieval-run.md#168-885",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "recall-and-precision.md#1116-1660",
+        "recall-and-precision.md#563-1266"
+      ]
+    },
+    {
+      "id": "inv-basic",
+      "question": "what is an inverted index",
+      "relevant": [
+        "inverted-indexes.md#0-620"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "inverted-indexes.md#0-620",
+        "why-the-index-is-readable.md#0-577",
+        "tracing-a-retrieval-run.md#0-318",
+        "why-the-index-is-readable.md#427-1184",
+        "tracing-a-retrieval-run.md#168-885",
+        "building-an-evaluation-dataset.md#0-786",
+        "tokenisation.md#0-678",
+        "tokenisation.md#984-1665",
+        "recall-and-precision.md#0-713",
+        "inverted-indexes.md#874-1526"
+      ]
+    },
+    {
+      "id": "inv-dict",
+      "question": "which part of the index decides how it is stored",
+      "relevant": [
+        "inverted-indexes.md#470-1024"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "inverted-indexes.md#470-1024",
+        "inverted-indexes.md#0-620",
+        "why-the-index-is-readable.md#0-577",
+        "tokenisation.md#0-678",
+        "why-the-index-is-readable.md#1034-1419",
+        "why-the-index-is-readable.md#427-1184",
+        "mean-reciprocal-rank.md#1054-1492",
+        "tokenisation.md#984-1665",
+        "recall-and-precision.md#563-1266",
+        "bm25-scoring.md#0-760"
+      ]
+    },
+    {
+      "id": "inv-segments",
+      "question": "why do production engines use segments",
+      "relevant": [
+        "inverted-indexes.md#874-1526"
+      ],
+      "returned": 16,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "inverted-indexes.md#874-1526",
+        "tracing-a-retrieval-run.md#1121-1543",
+        "chunking.md#0-790",
+        "building-an-evaluation-dataset.md#636-1190",
+        "building-an-evaluation-dataset.md#1040-1791",
+        "recall-and-precision.md#1116-1660",
+        "recall-and-precision.md#563-1266",
+        "inverted-indexes.md#470-1024",
+        "tracing-a-retrieval-run.md#735-1271",
+        "bm25-scoring.md#610-1241"
+      ]
+    },
+    {
+      "id": "rp-defs",
+      "question": "what is the difference between recall and precision",
+      "relevant": [
+        "recall-and-precision.md#0-713"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "recall-and-precision.md#0-713",
+        "recall-and-precision.md#1116-1660",
+        "recall-and-precision.md#563-1266",
+        "tracing-a-retrieval-run.md#1121-1543",
+        "tracing-a-retrieval-run.md#735-1271",
+        "term-saturation-and-length-normalisation.md#0-690",
+        "building-an-evaluation-dataset.md#1040-1791",
+        "chunking.md#1215-1894",
+        "mean-reciprocal-rank.md#0-685",
+        "why-the-index-is-readable.md#427-1184"
+      ]
+    },
+    {
+      "id": "rp-binds",
+      "question": "which metric constrains a retrieval step feeding a model",
+      "relevant": [
+        "recall-and-precision.md#0-713"
+      ],
+      "returned": 20,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "recall-and-precision.md#0-713",
+        "lexical-versus-semantic.md#0-687",
+        "bm25-scoring.md#610-1241",
+        "building-an-evaluation-dataset.md#0-786",
+        "building-an-evaluation-dataset.md#1040-1791",
+        "building-an-evaluation-dataset.md#636-1190",
+        "recall-and-precision.md#1116-1660",
+        "tokenisation.md#984-1665",
+        "lexical-versus-semantic.md#1010-1654",
+        "mean-reciprocal-rank.md#1054-1492"
+      ]
+    },
+    {
+      "id": "rp-recallk",
+      "question": "what does recall at k measure",
+      "relevant": [
+        "recall-and-precision.md#563-1266"
+      ],
+      "returned": 26,
+      "first_relevant_rank": 6,
+      "recall@1": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 1.0,
+      "top": [
+        "mean-reciprocal-rank.md#0-685",
+        "mean-reciprocal-rank.md#535-1204",
+        "recall-and-precision.md#0-713",
+        "lexical-versus-semantic.md#537-1160",
+        "lexical-versus-semantic.md#1010-1654",
+        "recall-and-precision.md#563-1266",
+        "mean-reciprocal-rank.md#1054-1492",
+        "recall-and-precision.md#1116-1660",
+        "why-the-index-is-readable.md#427-1184",
+        "term-saturation-and-length-normalisation.md#994-1671"
+      ]
+    },
+    {
+      "id": "rp-why-not-precision",
+      "question": "why is precision alone not enough",
+      "relevant": [
+        "recall-and-precision.md#1116-1660"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "recall-and-precision.md#1116-1660",
+        "recall-and-precision.md#563-1266",
+        "recall-and-precision.md#0-713",
+        "inverted-indexes.md#874-1526",
+        "tracing-a-retrieval-run.md#735-1271",
+        "bm25-scoring.md#610-1241",
+        "tracing-a-retrieval-run.md#168-885",
+        "chunking.md#0-790",
+        "inverted-indexes.md#470-1024",
+        "tracing-a-retrieval-run.md#0-318"
+      ]
+    },
+    {
+      "id": "mrr-def",
+      "question": "how is reciprocal rank computed",
+      "relevant": [
+        "mean-reciprocal-rank.md#0-685"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "mean-reciprocal-rank.md#0-685",
+        "mean-reciprocal-rank.md#1054-1492",
+        "tracing-a-retrieval-run.md#168-885",
+        "mean-reciprocal-rank.md#535-1204",
+        "tracing-a-retrieval-run.md#735-1271",
+        "bm25-scoring.md#0-760",
+        "tracing-a-retrieval-run.md#0-318",
+        "inverted-indexes.md#470-1024",
+        "term-saturation-and-length-normalisation.md#540-1144",
+        "inverted-indexes.md#0-620"
+      ]
+    },
+    {
+      "id": "mrr-limit",
+      "question": "what does mrr ignore",
+      "relevant": [
+        "mean-reciprocal-rank.md#535-1204"
+      ],
+      "returned": 16,
+      "first_relevant_rank": 2,
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "mean-reciprocal-rank.md#0-685",
+        "mean-reciprocal-rank.md#535-1204",
+        "recall-and-precision.md#0-713",
+        "mean-reciprocal-rank.md#1054-1492",
+        "tracing-a-retrieval-run.md#0-318",
+        "tracing-a-retrieval-run.md#168-885",
+        "bm25-scoring.md#610-1241",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "recall-and-precision.md#563-1266",
+        "chunking.md#0-790"
+      ]
+    },
+    {
+      "id": "mrr-interpret",
+      "question": "what does a high recall with low mrr mean",
+      "relevant": [
+        "mean-reciprocal-rank.md#1054-1492"
+      ],
+      "returned": 24,
+      "first_relevant_rank": 2,
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "mean-reciprocal-rank.md#0-685",
+        "mean-reciprocal-rank.md#1054-1492",
+        "mean-reciprocal-rank.md#535-1204",
+        "recall-and-precision.md#0-713",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "bm25-scoring.md#0-760",
+        "recall-and-precision.md#563-1266",
+        "tracing-a-retrieval-run.md#1121-1543",
+        "chunking.md#0-790",
+        "tokenisation.md#528-1134"
+      ]
+    },
+    {
+      "id": "ds-topic",
+      "question": "how should the relevant passage be chosen for a dataset",
+      "relevant": [
+        "building-an-evaluation-dataset.md#0-786"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 2,
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "building-an-evaluation-dataset.md#1040-1791",
+        "building-an-evaluation-dataset.md#0-786",
+        "tracing-a-retrieval-run.md#168-885",
+        "building-an-evaluation-dataset.md#636-1190",
+        "tracing-a-retrieval-run.md#0-318",
+        "recall-and-precision.md#563-1266",
+        "term-saturation-and-length-normalisation.md#540-1144",
+        "mean-reciprocal-rank.md#0-685",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "recall-and-precision.md#0-713"
+      ]
+    },
+    {
+      "id": "ds-circular",
+      "question": "what is the most common way an evaluation number becomes meaningless",
+      "relevant": [
+        "building-an-evaluation-dataset.md#0-786"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "building-an-evaluation-dataset.md#0-786",
+        "tokenisation.md#984-1665",
+        "chunking.md#1215-1894",
+        "why-the-index-is-readable.md#0-577",
+        "tracing-a-retrieval-run.md#0-318",
+        "recall-and-precision.md#1116-1660",
+        "why-the-index-is-readable.md#427-1184",
+        "tracing-a-retrieval-run.md#168-885",
+        "inverted-indexes.md#0-620",
+        "tokenisation.md#528-1134"
+      ]
+    },
+    {
+      "id": "ds-broken",
+      "question": "what should happen when a dataset cites a passage the index lacks",
+      "relevant": [
+        "building-an-evaluation-dataset.md#636-1190"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "building-an-evaluation-dataset.md#636-1190",
+        "tracing-a-retrieval-run.md#0-318",
+        "tracing-a-retrieval-run.md#168-885",
+        "building-an-evaluation-dataset.md#0-786",
+        "building-an-evaluation-dataset.md#1040-1791",
+        "recall-and-precision.md#1116-1660",
+        "why-the-index-is-readable.md#0-577",
+        "why-the-index-is-readable.md#427-1184",
+        "chunking.md#1215-1894",
+        "inverted-indexes.md#0-620"
+      ]
+    },
+    {
+      "id": "ds-howmany",
+      "question": "how many cases are needed before publishing a number",
+      "relevant": [
+        "building-an-evaluation-dataset.md#1040-1791"
+      ],
+      "returned": 25,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "building-an-evaluation-dataset.md#1040-1791",
+        "tracing-a-retrieval-run.md#168-885",
+        "bm25-scoring.md#0-760",
+        "inverted-indexes.md#0-620",
+        "recall-and-precision.md#1116-1660",
+        "lexical-versus-semantic.md#537-1160",
+        "lexical-versus-semantic.md#1010-1654",
+        "mean-reciprocal-rank.md#1054-1492",
+        "why-the-index-is-readable.md#0-577",
+        "why-the-index-is-readable.md#427-1184"
+      ]
+    },
+    {
+      "id": "trace-why",
+      "question": "why must a retrieval run record how it got its answer",
+      "relevant": [
+        "tracing-a-retrieval-run.md#0-318"
+      ],
+      "returned": 32,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "tracing-a-retrieval-run.md#0-318",
+        "building-an-evaluation-dataset.md#0-786",
+        "lexical-versus-semantic.md#1010-1654",
+        "building-an-evaluation-dataset.md#1040-1791",
+        "building-an-evaluation-dataset.md#636-1190",
+        "mean-reciprocal-rank.md#1054-1492",
+        "tracing-a-retrieval-run.md#168-885",
+        "recall-and-precision.md#563-1266",
+        "recall-and-precision.md#0-713",
+        "recall-and-precision.md#1116-1660"
+      ]
+    },
+    {
+      "id": "trace-terms",
+      "question": "what should a trace record about the query terms",
+      "relevant": [
+        "tracing-a-retrieval-run.md#168-885"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 2,
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "tracing-a-retrieval-run.md#0-318",
+        "tracing-a-retrieval-run.md#168-885",
+        "bm25-scoring.md#0-760",
+        "inverted-indexes.md#0-620",
+        "mean-reciprocal-rank.md#0-685",
+        "tokenisation.md#984-1665",
+        "inverted-indexes.md#470-1024",
+        "chunking.md#0-790",
+        "building-an-evaluation-dataset.md#0-786",
+        "mean-reciprocal-rank.md#1054-1492"
+      ]
+    },
+    {
+      "id": "trace-nearmiss",
+      "question": "why report candidates beyond the top k",
+      "relevant": [
+        "tracing-a-retrieval-run.md#735-1271"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "tracing-a-retrieval-run.md#735-1271",
+        "tracing-a-retrieval-run.md#168-885",
+        "bm25-scoring.md#610-1241",
+        "recall-and-precision.md#1116-1660",
+        "recall-and-precision.md#0-713",
+        "recall-and-precision.md#563-1266",
+        "why-the-index-is-readable.md#0-577",
+        "mean-reciprocal-rank.md#1054-1492",
+        "chunking.md#0-790",
+        "mean-reciprocal-rank.md#0-685"
+      ]
+    },
+    {
+      "id": "lex-def",
+      "question": "what does lexical retrieval match",
+      "relevant": [
+        "lexical-versus-semantic.md#0-687"
+      ],
+      "returned": 21,
+      "first_relevant_rank": 2,
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "chunking.md#0-790",
+        "lexical-versus-semantic.md#0-687",
+        "lexical-versus-semantic.md#1010-1654",
+        "mean-reciprocal-rank.md#0-685",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "tracing-a-retrieval-run.md#0-318",
+        "lexical-versus-semantic.md#537-1160",
+        "recall-and-precision.md#0-713",
+        "mean-reciprocal-rank.md#535-1204",
+        "building-an-evaluation-dataset.md#0-786"
+      ]
+    },
+    {
+      "id": "lex-identifiers",
+      "question": "where does lexical retrieval beat semantic retrieval",
+      "relevant": [
+        "lexical-versus-semantic.md#0-687"
+      ],
+      "returned": 16,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "lexical-versus-semantic.md#0-687",
+        "lexical-versus-semantic.md#537-1160",
+        "lexical-versus-semantic.md#1010-1654",
+        "mean-reciprocal-rank.md#0-685",
+        "mean-reciprocal-rank.md#535-1204",
+        "bm25-scoring.md#610-1241",
+        "mean-reciprocal-rank.md#1054-1492",
+        "chunking.md#0-790",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "tracing-a-retrieval-run.md#0-318"
+      ]
+    },
+    {
+      "id": "lex-hybrid",
+      "question": "when is hybrid retrieval justified",
+      "relevant": [
+        "lexical-versus-semantic.md#1010-1654"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "lexical-versus-semantic.md#1010-1654",
+        "lexical-versus-semantic.md#537-1160",
+        "tracing-a-retrieval-run.md#0-318",
+        "lexical-versus-semantic.md#0-687",
+        "building-an-evaluation-dataset.md#0-786",
+        "building-an-evaluation-dataset.md#1040-1791",
+        "recall-and-precision.md#1116-1660",
+        "mean-reciprocal-rank.md#1054-1492",
+        "chunking.md#1215-1894",
+        "building-an-evaluation-dataset.md#636-1190"
+      ]
+    },
+    {
+      "id": "tok-def",
+      "question": "what does tokenisation decide",
+      "relevant": [
+        "tokenisation.md#0-678"
+      ],
+      "returned": 14,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "tokenisation.md#0-678",
+        "tracing-a-retrieval-run.md#168-885",
+        "mean-reciprocal-rank.md#0-685",
+        "building-an-evaluation-dataset.md#0-786",
+        "mean-reciprocal-rank.md#535-1204",
+        "tracing-a-retrieval-run.md#0-318",
+        "bm25-scoring.md#610-1241",
+        "recall-and-precision.md#0-713",
+        "term-saturation-and-length-normalisation.md#994-1671",
+        "chunking.md#0-790"
+      ]
+    },
+    {
+      "id": "tok-stem",
+      "question": "what does stemming do",
+      "relevant": [
+        "tokenisation.md#528-1134"
+      ],
+      "returned": 19,
+      "first_relevant_rank": 2,
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "mean-reciprocal-rank.md#0-685",
+        "tokenisation.md#528-1134",
+        "chunking.md#0-790",
+        "tokenisation.md#0-678",
+        "mean-reciprocal-rank.md#535-1204",
+        "tracing-a-retrieval-run.md#0-318",
+        "tokenisation.md#984-1665",
+        "building-an-evaluation-dataset.md#636-1190",
+        "tracing-a-retrieval-run.md#168-885",
+        "inverted-indexes.md#874-1526"
+      ]
+    },
+    {
+      "id": "tok-stop",
+      "question": "why remove stopwords",
+      "relevant": [
+        "tokenisation.md#984-1665"
+      ],
+      "returned": 15,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "tokenisation.md#984-1665",
+        "tokenisation.md#528-1134",
+        "recall-and-precision.md#1116-1660",
+        "recall-and-precision.md#563-1266",
+        "inverted-indexes.md#470-1024",
+        "tracing-a-retrieval-run.md#735-1271",
+        "bm25-scoring.md#610-1241",
+        "why-the-index-is-readable.md#0-577",
+        "lexical-versus-semantic.md#537-1160",
+        "inverted-indexes.md#874-1526"
+      ]
+    },
+    {
+      "id": "json-inspect",
+      "question": "why keep the index human readable",
+      "relevant": [
+        "why-the-index-is-readable.md#0-577"
+      ],
+      "returned": 33,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "why-the-index-is-readable.md#0-577",
+        "why-the-index-is-readable.md#427-1184",
+        "mean-reciprocal-rank.md#535-1204",
+        "inverted-indexes.md#874-1526",
+        "inverted-indexes.md#470-1024",
+        "inverted-indexes.md#0-620",
+        "chunking.md#1215-1894",
+        "recall-and-precision.md#1116-1660",
+        "why-the-index-is-readable.md#1034-1419",
+        "recall-and-precision.md#563-1266"
+      ]
+    },
+    {
+      "id": "json-diff",
+      "question": "how does a readable index help explain a change in recall",
+      "relevant": [
+        "why-the-index-is-readable.md#427-1184"
+      ],
+      "returned": 30,
+      "first_relevant_rank": 1,
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "top": [
+        "why-the-index-is-readable.md#427-1184",
+        "why-the-index-is-readable.md#0-577",
+        "mean-reciprocal-rank.md#0-685",
+        "tokenisation.md#984-1665",
+        "mean-reciprocal-rank.md#535-1204",
+        "recall-and-precision.md#563-1266",
+        "mean-reciprocal-rank.md#1054-1492",
+        "chunking.md#1215-1894",
+        "inverted-indexes.md#470-1024",
+        "inverted-indexes.md#0-620"
+      ]
+    }
+  ]
+}

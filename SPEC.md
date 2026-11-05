@@ -99,9 +99,14 @@ IDF(t)      = ln( 1 + (N − n(t) + 0.5) / (n(t) + 0.5) )
 `citation handle` ascending, so a given index and query always produce the same order.
 
 **The index is JSON.** Not a binary blob, not a pickle, not a database. It stores `k1`, `b`, the
-chunk list (handle, hash, path, offsets, length, token count) and the posting lists. It is
+chunk list (handle, hash, path, offsets, length, token count, **text**) and the posting lists. It is
 inspectable, diffable, and a reviewer can check the arithmetic by hand. See ADR-0002. The cost is
 memory and build time; that cost is acceptable and is stated in the README.
+
+Storing the chunk text makes the index self-contained: `query` and `evaluate` take only the index
+file, with no need to re-read the corpus, so a run cannot silently use different text from the one
+that was indexed. It also means the index is a full copy of the corpus — the trade-off that makes the
+whole-in-memory design the next limit as the corpus grows.
 
 The index records `index_sha256` — a hash over the serialised index — which the run artifact cites.
 
