@@ -1,5 +1,7 @@
 # recall-lab
 
+![tests](https://github.com/Marwanelh/recall-lab/actions/workflows/tests.yml/badge.svg)
+
 Point it at a folder of your own documents, ask questions, get passages cited back to the exact
 file and character offsets — **and see how good the retrieval actually is, as numbers you can
 reproduce.**
